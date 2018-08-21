@@ -1,9 +1,11 @@
 import path from 'path';
 
-module.exports = {
+const config = {
     entry: '../src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'webpack.bundle.js',
+        filename: 'webpack.bundle.js'
     }
 }
+
+module.exports = config;
