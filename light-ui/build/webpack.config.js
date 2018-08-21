@@ -3,7 +3,7 @@ import path from 'path';
 module.exports = {
     entry: '../src/index.js',
     output: {
-        path: '',
-        filename: ''
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'webpack.bundle.js',
     }
 }
