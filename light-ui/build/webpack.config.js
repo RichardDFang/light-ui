@@ -6,6 +6,6 @@ const config = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'webpack.bundle.js'
     }
-}
+};
 
 module.exports = config;
