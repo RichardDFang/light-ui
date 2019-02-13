@@ -1,15 +1,20 @@
 {
-  "name": "light-ui",
-  "version": "1.0.0",
-  "description": "Vue UI elements",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "component",
-    "vue"
-  ],
-  "author": "fst",
-  "license": "ISC"
+    "name": "light-ui",
+    "version": "1.0.0",
+    "description": "Vue UI elements",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "node build/index.js"
+    },
+    "keywords": [
+        "component",
+        "vue"
+    ],
+    "author": "fst",
+    "license": "ISC",
+    "devDependencies": {
+        "webpack": "^4.29.3",
+        "webpack-cli": "^3.2.3"
+    }
 }
