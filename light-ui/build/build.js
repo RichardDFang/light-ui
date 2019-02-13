@@ -1,4 +1,4 @@
-import webpack from 'webpack';
-import webpackConfig from './webpack.config.js';
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
 
-webpack(webpackConfig);
+webpack(webpackConfig, (err, stats) => {});

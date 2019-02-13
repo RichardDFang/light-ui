@@ -1,9 +1,9 @@
-import path from 'path';
+var path = require('path');
 
 const config = {
-    entry: '../src/index.js',
+    entry: path.resolve(__dirname, '../src/index.js'),
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, '../dist'),
         filename: 'webpack.bundle.js'
     }
 };
