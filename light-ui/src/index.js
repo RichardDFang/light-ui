@@ -1,1 +1,4 @@
-var hh = "hello World";
+import './style/style.css';
+
+
+alert('hello webpack');
