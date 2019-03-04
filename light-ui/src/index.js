@@ -1,4 +1,4 @@
 import './style/style.css';
 
 
-alert('hello webpack');
+alert('hello webpack1');
