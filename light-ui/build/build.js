@@ -5,7 +5,7 @@ webpack(webpackConfig, (err, stats) => {
     process.stdout.write(stats.toString({
         colors: true,
         children: false,
-        modules: false,
+        modules: true,
         chunks: false,
         chunkModules: false
     }) + '\n\n');

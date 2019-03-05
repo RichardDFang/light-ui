@@ -8,8 +8,11 @@ var webpackConfig = merge(baseWebpackConfig, {
     entry: ['webpack-hot-middleware/client?noInfo=true&reload=true', path.resolve(__dirname, '../src/index.js')],
     devtool: '#cheap-eval-source-map',
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ]
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        })
+    ],
 });
 
 module.exports = webpackConfig;
