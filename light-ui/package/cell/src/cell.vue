@@ -1,5 +1,5 @@
 <template>
-    <a class="cell-line">
+    <a class="cell-line" @click="handleClick">
         <div class="cell-wrapper">
             <div class="cell-content">
                 <slot name="icon">
@@ -23,12 +23,25 @@ export default {
     name: "lt-cell",
     props: {
         title: String,
+        label: String,
+        isLink: Boolean,
+        href: [String, Object],
         value: {}
+    },
+    methods: {
+        handleClick: function(event) {
+            event.preventDefault();
+            this.$router.push(this.href);
+        }
     }
 };
 </script>
 
 <style>
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .cell-line {
     display: flex;
 }

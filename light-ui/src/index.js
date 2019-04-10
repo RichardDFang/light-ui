@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
+import router from './router';
 
 import MintUI from 'mint-ui';
 
@@ -9,6 +10,7 @@ Vue.use(MintUI);
 
 new Vue ({
     el: '#app',
+    router,
     template: '<App/>',
     components: {App},
 });

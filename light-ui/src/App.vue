@@ -1,21 +1,14 @@
 <template>
-    <div class="list-box">
-        <cell
-            title = "toast"
-            value = "获埃及法"
-        ></cell>
-    </div>
+    <router-view></router-view>
 </template>
 
 <script>
-import cell from '../package/cell';
 
 export default {
-    name: 'App',
-    components: {
-        cell
+    name: "App",
+    mounted: function() {
     }
-}
+};
 </script>
 
 <style>
