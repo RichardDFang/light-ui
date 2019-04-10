@@ -20,20 +20,20 @@ var webpackConfig = merge(baseWebpackConfig, {
             chunkFilename: "[id].css"
         })
     ],
-    module: {
-        rules: [{
-            test: /\.css$/,
-            use: [
-                MiniCssExtractPlugin.loader,
-                {
-                    loader: 'css-loader',
-                    options: {
-                        sourceMap: true
-                    }
-                }
-            ]
-        }]
-    }
+    // module: {
+    //     rules: [{
+    //         test: /\.css$/,
+    //         use: [
+    //             MiniCssExtractPlugin.loader,
+    //             {
+    //                 loader: 'css-loader',
+    //                 options: {
+    //                     sourceMap: true
+    //                 }
+    //             }
+    //         ]
+    //     }]
+    // }
 });
 
 module.exports = webpackConfig;

@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const config = {
@@ -9,38 +9,25 @@ const config = {
     output: {
         path: path.resolve(__dirname, '../dist')
     },
+    resolve: {
+        extensions: ['.js', '.vue', '.json'],
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js',
+            '@': path.resolve('src')
+        }
+    },
     plugins: [
         new CleanWebpackPlugin(['dist'], {
             root: path.resolve(__dirname, '../')
         }),
-        new HtmlWebpackPlugin({
-            title: 'Output Management'
-        })
+        new VueLoaderPlugin()
     ],
-    // module: {
-    //     rules: [{
-    //             test: /\.css$/,
-    //             use: [
-    //                 'style-loader',
-    //                 'css-loader'
-    //             ]
-    //         },
-    //         // {
-    //         //     test: /\.(png|svg|jpe?g|gif)$/,
-    //         //     use: 'url-loader',
-    //         //     options: {
-    //         //         limit: 10000
-    //         //     }
-    //         // }
-    //         // {
-    //         //     test: /\.(woff2?|eot|ttf|otf)$/,
-    //         //     use: 'url-loader',
-    //         //     options: {
-    //         //         limit: 10000
-    //         //     }
-    //         // }
-    //     ]
-    // }
+    module: {
+        rules: [{
+            test: /\.vue$/,
+            loader: 'vue-loader'
+        }]
+    }
 };
 
 module.exports = config;

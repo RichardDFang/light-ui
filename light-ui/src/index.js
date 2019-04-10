@@ -1,4 +1,14 @@
-import './style/style.css';
+import Vue from 'vue';
+import App from './App.vue';
 
-import { cube } from './math.js';
-alert('hello webpack1');
+import MintUI from 'mint-ui';
+
+import 'mint-ui/lib/style.css';
+
+Vue.use(MintUI);
+
+new Vue ({
+    el: '#app',
+    template: '<App/>',
+    components: {App},
+});

@@ -8,13 +8,24 @@ const webpackConfig = require('./webpack.dev.config');
 const compiler = webpack(webpackConfig);
 
 var devMiddleware = webpackDevMiddleware(compiler, {
-    publicPath: '/'
+    publicPath: '/',
+    quiet: true,
+    noInfo: true,
+    stats: {
+        colors: true,
+        children: false,
+        modules: true,
+        chunks: false,
+        chunkModules: false
+    }
 });
 
 app.use(devMiddleware);
 
 var hotMiddleWare = webpackHotMiddleware(compiler, {
-    log: false
+    log: () => {},
+    reload: true,
+    noInfo: true
 });
 
 app.use(hotMiddleWare);
