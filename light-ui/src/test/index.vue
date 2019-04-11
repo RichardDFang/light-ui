@@ -6,9 +6,9 @@
     </div>
 </template>
 <script>
-import cell from "../package/cell";
+import cell from "../../package/cell";
 export default {
-    name: 'main',
+    name: 'index',
     components: {
         cell
     }
